@@ -8,7 +8,7 @@ function Comment({ review }) {
 
   function deletecomment(commentid,book) {
 
-    axios.delete(`http://localhost:3001/books/${book}/review/${commentid}`)
+    axios.delete(`https://bookmanage.glitch.me/books/${book}/review/${commentid}`)
       .then((res) => {
         alert("your comment deleted successfully")
         window.location.reload(false)
@@ -16,6 +16,13 @@ function Comment({ review }) {
 
       )
       .catch((err) => alert(err.response.data.message) )
+  }
+
+  function Ucomment(a){
+    console.log(a)
+    localStorage.setItem("commentId", a)
+    window.location.reload(false)
+    alert("update your comment below")
   }
 
 
@@ -45,6 +52,9 @@ function Comment({ review }) {
 
                   <button className="btn btn-outline-success dle" type="submit">
                     <i className="fa-solid fa-trash " onClick={() => deletecomment(element._id,bookId)}>  Delete</i>
+                  </button>
+                  <button className="btn btn-outline-success dle" type="submit">
+                    <i className="fa-solid fa-trash " onClick={() => Ucomment(element._id)}>Update</i>
                   </button>
 
                 </div>

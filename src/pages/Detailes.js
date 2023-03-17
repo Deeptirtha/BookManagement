@@ -15,7 +15,7 @@ function Detailes() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/books/${bookId}`)
+      .get(`https://bookmanage.glitch.me/books/${bookId}`)
       .then((responce) => {
         setBook(responce.data.data);
         setreview(responce.data.data.reviewsData);

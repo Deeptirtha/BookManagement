@@ -28,7 +28,7 @@ function CreateBook() {
       // bookData.bookCover = bookCover
       console.log(bookData)
 
-      axios.post("http://localhost:3001/books", bookData, { headers: { "x-api-key": token } }).then((responece)=>alert("Book has created successfully"))
+      axios.post("https://bookmanage.glitch.me/books", bookData, { headers: { "x-api-key": token } }).then((responece)=>alert("Book has created successfully"))
       .catch((err)=>alert(err.message))
   }
 

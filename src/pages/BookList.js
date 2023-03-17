@@ -11,7 +11,7 @@ function BookList() {
     let token = localStorage.getItem('token');
 
     useEffect(() => {
-        axios.get("http://localhost:3001/books", { headers: { "x-api-key": token } }).then((responce) => 
+        axios.get("https://bookmanage.glitch.me/books", { headers: { "x-api-key": token } }).then((responce) => 
       
         { 
             SetBooks(responce.data.msg) })
@@ -37,7 +37,7 @@ function BookList() {
                             <span>{x.title}</span>
                             <span>Reviews : {x.reviews}</span>
                             <div className='bt-div'>
-                            <a href={`bookUpdate/${x._id}`}><button id='btn1'  onClick={() => Details(x._id)}>Update</button></a>
+                            <a href={`bookUpdate/${x._id}`}><button id='btn1'  onClick={() => Details(x._id)}>More</button></a>
                             <a href={`bookDetails/${x._id}`}><button id='btn2'>Detailes</button></a>
                             </div>
                         </div>)

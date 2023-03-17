@@ -29,7 +29,7 @@ function UpdateBook() {
         if(category.length>0)bookData.category = category
         if(subcategory.length>0)bookData.subcategory = subcategory
   
-        axios.put(`http://localhost:3001/books/${a}`, bookData, { headers: { "x-api-key": token } }).then((responece)=>{
+        axios.put(`https://bookmanage.glitch.me/books/${a}`, bookData, { headers: { "x-api-key": token } }).then((responece)=>{
             
         alert("Book updated successfully")
 

@@ -6,27 +6,46 @@ import { useParams } from "react-router-dom";
 
 function Addcomment() {
 
-  const { bookId } = useParams();
+  const { bookId} = useParams();
+  let cid=localStorage.getItem("commentId")
 
     const [comment,setComment]=useState("")
     const [name,setname]=useState("")
     const [rate,setrate]=useState()
    
 
+
+
+   function addcom(bookId,cId){
+    // console.log(bookId,cId)
+    
     let options = {}
-    options.reviewedBy = name
-    options.review = comment
-    options.rating=rate
+    if(name)options.reviewedBy = name
+    if(comment)options.review = comment
+    if(rate)options.rating=rate
 
 
-   function addcom(bookId){
-    axios.post(`http://localhost:3001/books/${bookId}/review`,options)
+    if(cId){
+      console.log(bookId,cId,options,"hii")
+      axios.put(`https://bookmanage.glitch.me/books/${bookId}/review/${cId}`,options)
+      .then((res) => {
+        localStorage.removeItem("commentId")
+        alert("your comment updated successfully")
+         window.location.reload(false)
+      }
+
+      )
+      .catch((err) => alert(err.response.data.message) )
+    }
+else
+{    axios.post(`https://bookmanage.glitch.me/books/${bookId}/review`,options)
     .then((res)=> {
         alert("Thanks for your review")
-        window.location.reload(false)}
+         window.location.reload(false)
+      }
    
     )
-    .catch((err) => alert(err.response.data.message) )
+    .catch((err) => alert(err.response.data.message) )}
    }
 
 
@@ -44,7 +63,7 @@ function Addcomment() {
         </div>
 
         <div>
-        <button className='add-butn btn'  onClick={()=>{addcom(bookId)}}>Add</button>
+        <button className='add-butn btn'  onClick={()=>{addcom(bookId,cid)}}>{cid?"update comment":"Add comment"}</button>
         </div>
       
     </div>

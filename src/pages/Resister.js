@@ -28,7 +28,7 @@ function Resister() {
         let title = document.getElementById("select").value
         resisterDetials.title = title;
          
-        axios.post("http://localhost:3001/register", resisterDetials)
+        axios.post("https://bookmanage.glitch.me/register", resisterDetials)
             .then((responce) => {
                 alert("Your account has created")
                 window.location.replace("/login")
