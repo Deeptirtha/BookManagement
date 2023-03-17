@@ -11,9 +11,18 @@ function BookList() {
     let token = localStorage.getItem('token');
 
     useEffect(() => {
-        axios.get("http://localhost:3001/books", { headers: { "x-api-key": token } }).then((responce) => { SetBooks(responce.data.data) })
+        axios.get("http://localhost:3001/books", { headers: { "x-api-key": token } }).then((responce) => 
+      
+        { 
+            SetBooks(responce.data.msg) })
             .catch((err) => alert(err.message))
     }, [])
+
+
+    function Details(a) {
+        window.location.replace(`bookList/${a}`)
+      }
+
 
 
     return (
@@ -24,19 +33,17 @@ function BookList() {
                     {books.map((x, i) => {
                         return (<div className="itemBox" key={i}>
 
-                            <img id='books' src={(x.bookCover) ? `${x.bookCover}` : "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"} alt='error' />
+                            <img id='books' src={(x.bookCover) ? `${x.bookCover}` : "https://st2.depositphotos.com/1105977/5461/i/600/depositphotos_54615585-stock-photo-old-books-on-wooden-table.jpg"} alt='error' />
                             <span>{x.title}</span>
-                            <span>User : {x.userId.name}</span>
                             <span>Reviews : {x.reviews}</span>
-                            
-                            <a href={`/bookDetails/${x._id}`}><button id='btn1' className="btn btn-primary" >More Details</button></a>
+                            <div className='bt-div'>
+                            <a href={`bookUpdate/${x._id}`}><button id='btn1'  onClick={() => Details(x._id)}>Update</button></a>
+                            <a href={`bookDetails/${x._id}`}><button id='btn2'>Detailes</button></a>
+                            </div>
                         </div>)
                     })}
                 </div>
             </>
-            <div id='sideBox'>
-                <a id='cbBtn' href='/createBook'>Create Book</a>
-            </div>
         </div>
     )
 }

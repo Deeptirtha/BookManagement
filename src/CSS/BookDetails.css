@@ -1,10 +1,10 @@
 #bigBoxBD{
-    padding: 5vh;
     height: fit-content;
     border: 0.2px solid white;
-    background-image: url(../../public/loginBc.png);
     background-repeat: repeat;
-    background-size: 100% 200vh;
+    background-color: #8f8f8f;
+    height: 60rem;
+
 }
 
 #container{
@@ -14,19 +14,48 @@
     width: 50%;
     height:fit-content;
     color: rgb(189, 34, 200);
-   
-    margin-inline: 20%;
+    margin-left: 28rem;
+    background-color:rgb(255, 255, 255);
+    box-shadow: rgb(28 28 28 / 20%) 0px 2px 8px;
    text-align: center;
    border-radius: 10px;
-   background-color: rgb(236, 230, 237);
-   box-shadow: 10% black;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
+#container{
+    background-color:#000000;
+    box-shadow: rgba(255, 253, 253, 1) 20px 20px 80px;
+    color: aliceblue;
 
+}
+#containerrr{
+    padding: 2vh;
+    margin-top: 2%;
+    /* border: 2px solid red; */
+    width: 50%;
+    height:fit-content;
+    color: rgb(189, 34, 200);
+    margin-left: 28rem;
+    background-color:rgb(255, 255, 255);
+    box-shadow: rgb(28 28 28 / 20%) 0px 2px 8px;
+   text-align: center;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    background-color:#000000;
+    box-shadow: rgba(255, 253, 253, 1) 20px 20px 80px;
+    color: aliceblue;
+    margin-top: 10rem;
+
+}
 
 .imputCB{
     margin: 2vh;
+}
+.btn22{
+    margin: 10px;
 }

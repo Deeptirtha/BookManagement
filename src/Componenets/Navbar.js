@@ -3,6 +3,7 @@ import "../CSS/Navbar.css"
 
 
 function Navbar() {
+    let Id=localStorage.getItem("userId")
 
     return (
         <>
@@ -16,13 +17,14 @@ function Navbar() {
                         <div className="navbar-nav">
                             <a className="nav-link active" aria-current="page" href="/">Home</a>
                             <a className="nav-link active"  href="/bookList">Books</a>
-                            <a className="nav-link active" href="/contact">Contact</a>
+                            <a className="nav-link active"  href="/createBook">Create-Books</a>
                             <a className="nav-link active" href="/about" >About</a>
+                            <a className="nav-link active" href="/resister" >{Id?<></>:"Register"}</a>
                         </div>
                     </div>
                 </div>
                 <form class="d-flex" role="search">
-                    <a href='/login' id='loginBtn'>Login</a>
+                    <a href='/login' id='loginBtn' style={{border: "none"}}>{Id?<></>:"Login"}</a>
                 </form>
             </nav>
         </>

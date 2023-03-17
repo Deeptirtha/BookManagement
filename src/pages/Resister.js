@@ -37,11 +37,12 @@ function Resister() {
     return (
         <div id='bigBox'>
             <Navbar/>
-            <div id="userResister">
-                <h1 id='resis'>User Register</h1>
-            </div>
+
 
             <div className="userResister">
+            <div id="userResister">
+                <h1 id='resis'>Register</h1>
+            </div>
                 <form onSubmit={resisterUser}>
                     <div className="resister-form" id='title'>
                         <span> Title </span>

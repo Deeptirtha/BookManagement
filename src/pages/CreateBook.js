@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import Navbar from '../Componenets/Navbar'
+import "../CSS/Resister.css"
 
 function CreateBook() {
   const [title, setTitle] = useState("")
@@ -36,14 +37,14 @@ function CreateBook() {
       <Navbar/>
       <div id="container">
         <form onSubmit={createBook}>
-          <div>Title: <input className='imputCB' type="text" value={title} onChange={(e)=>setTitle(e.target.value)}/></div>
+          <div >Title: <input className='imputCB' type="text" value={title} onChange={(e)=>setTitle(e.target.value)}/></div>
           <div>excerpt: <input className='imputCB' type="text" value={excerpt} onChange={(e)=>setExcerpt(e.target.value)}/></div>
           <div>ISBN: <input className='imputCB' type="number" value={ISBN} onChange={(e)=>setISBN(e.target.value)}/></div>
           <div>category: <input className='imputCB' type="text" value={category} onChange={(e)=>setCategory(e.target.value)}/></div>
           <div>subcategory: <input className='imputCB' type="text" value={subcategory} onChange={(e)=>setSubcategory(e.target.value)}/></div>
           <div>ReleasedAt: <input className='imputCB' type="text" value={releasedAt} onChange={(e)=>setReleasedAt(e.target.value)}/></div>
-          <div>Book Cover Image: <input className='imputCB' type="file" value={bookCover} onChange={(e)=>setBookCover(e.target.value)}/></div>
-          <button id='btn1' className="btn btn-primary" type='submit' >Create Book</button>
+         
+          <button id='btn22' className="btn btn-primary" type='submit' >Create Book</button>
         </form>
       </div>
     </div>

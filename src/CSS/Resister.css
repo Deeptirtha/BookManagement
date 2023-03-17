@@ -1,10 +1,9 @@
 #bigBox{
     height: 100vh;
     border: 0.2px solid white;
-    
-    background-image: url(../../public/resisterBC.jpg);
     background-repeat: no-repeat;
     background-size: 100% 120%;
+    background-color: #8f8f8f;
 }
 
 .userResister{
@@ -15,11 +14,12 @@
     height: fit-content;
     color: white;
     font-weight: bold;
-    margin-inline: 30%;
+    margin-left: 34rem;
    text-align: end;
    border-radius: 10px;
-   background-color: rgb(202, 38, 217);
-   box-shadow: 10% black;
+   background-color:#242124;
+   box-shadow: rgba(255, 253, 253, 1) 20px 20px 80px;
+
    
 }
 
@@ -33,7 +33,7 @@
 }
 
 .inputs{
-    height: 20px;
+    height: 30px;
     padding:1px;
     border-radius: 5px;
     margin: 8px;
@@ -70,3 +70,4 @@
     margin: 2vh;
     border-radius: 5px;
 }
+

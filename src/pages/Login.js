@@ -19,9 +19,11 @@ function Login() {
         console.log(userLoginDetials)
         axios.post("http://localhost:3001/login", userLoginDetials)
         .then((responce) => {
-            localStorage.setItem("token", responce.data.data.token)
-            localStorage.setItem("userId", responce.data.data.userId)
+            console.log(responce.data)
+            localStorage.setItem("token", responce.data.message)
+            localStorage.setItem("userId", responce.data.id)
             alert("Login successfull")
+            window.location.replace("/")
         }).catch((err) => alert(err.message))
     }
 
@@ -48,11 +50,7 @@ function Login() {
                             <input type="password" className="form-control" id="exampleInputPassword1" required value={pass} onChange={(e) => setPass(e.target.value)} placeholder="Write your password" />
                         </div>
 
-                        <button type="submit" id='btn1' className="btn btn-primary">Login</button>
-
-                        <div id="headingLogin">
-                            <a href='/resister'>Resister</a>
-                        </div>
+                        <button type="submit" id='btn22' className="btn btn-primary">Login</button>
 
                     </form>
                 </div>
