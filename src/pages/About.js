@@ -47,14 +47,6 @@ function About() {
           <div>
             <img src="Deeptirtha.jpeg" alt="" className="pro-img" />
             <h3 className="tex deep">Deeptirtha Mukherjee</h3>
-            <div className="ico">
-              <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox"><i class="fa-regular fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/deeptirtha-mukherjee-7b5040249/"><i className="fa-brands fa-linkedin-in ic-chnage" /></a>
-              <a href="https://www.instagram.com/dee_tirtha/"><i className="fa-brands fa-instagram  ic-chnage" /></a>
-
-             
-            </div>
-
           </div>
 
 

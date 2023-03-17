@@ -31,6 +31,7 @@ function Resister() {
         axios.post("http://localhost:3001/register", resisterDetials)
             .then((responce) => {
                 alert("Your account has created")
+                window.location.replace("/login")
             }).catch((err) => alert(err.message))
 
     }
