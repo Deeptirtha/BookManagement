@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../CSS/Login.css"
 import axios from "axios"
 import Navbar from '../Componenets/Navbar'
-
+import Footer from '../Componenets/foot/Footer'
 
 
 
@@ -54,7 +54,7 @@ function Login() {
 
                     </form>
                 </div>
-
+                <Footer />
             </div>
         </>
     )

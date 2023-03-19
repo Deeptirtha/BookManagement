@@ -42,7 +42,7 @@ function Detailes() {
         </div>
 
         <div className="element"> 
-          <p className="tag">Author:--</p><p className="val">{user.name?user.name:"not found"}</p>
+          <p className="tag">Author:--</p><p className="val">{user?user.name:"not found"}</p>
         </div>
 
         <div className="element">
@@ -57,8 +57,9 @@ function Detailes() {
         <Comment review={review}/>
         <AddComnt />
       </div>
-
+      
     </div>
+
     </>
   );
 }

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import "../CSS/BookDetails.css"
 import Navbar from '../Componenets/Navbar'
 
+
 function BookDetails() {
   const [value, setValue] = useState({})
 

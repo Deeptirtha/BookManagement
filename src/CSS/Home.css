@@ -48,12 +48,3 @@
     background-color:rgb(255, 255, 255);
     box-shadow: rgba(14, 13, 13, 0.8) 0px 2px 8px;
 }
-.foot{
-    color: #FFFFFF;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-  margin-top: 2rem;
-    align-items: center;
-    
-}

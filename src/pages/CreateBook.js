@@ -33,6 +33,7 @@ function CreateBook() {
   }
 
   return (
+    <>
     <div id='bigBoxBD'>
       <Navbar/>
       <div id="container">
@@ -47,7 +48,10 @@ function CreateBook() {
           <button id='btn22' className="btn btn-primary" type='submit' >Create Book</button>
         </form>
       </div>
+     
     </div>
+
+    </>
   )
 }
 

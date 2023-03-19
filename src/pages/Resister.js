@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, {useState} from 'react'
 import "../CSS/Resister.css"
 import Navbar from '../Componenets/Navbar'
-
+import Footer from '../Componenets/foot/Footer'
 
 function Resister() {
     const [name, setName] = useState("")
@@ -86,6 +86,7 @@ function Resister() {
                     <a id='logins' href='/login'>Login</a>
                 </form>
             </div>
+            <Footer />
         </div>
     )
 }

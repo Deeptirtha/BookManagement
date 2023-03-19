@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Componenets/Navbar'
 import "../CSS/bookList.css"
-
+import Footer from '../Componenets/foot/Footer'
 
 
 function BookList() {
@@ -44,6 +44,7 @@ function BookList() {
                     })}
                 </div>
             </>
+            <Footer />
         </div>
     )
 }
