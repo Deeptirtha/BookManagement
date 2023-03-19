@@ -12,14 +12,14 @@ function BookDetails() {
 
   let token = localStorage.getItem("token")
   useEffect(() => {
-    axios.get(`http://bookmanage.glitch.me/books/${bookId}`, { headers: { "x-api-key": token } }).then((responce) => { 
+    axios.get(`https://bookmanage.glitch.me/books/${bookId}`, { headers: { "x-api-key": token } }).then((responce) => { 
     setValue(responce.data.data) })
 
       .catch((err) => alert(err.message))
   }, [])
 
   const deleteFun = () => {
-    axios.delete(`http://bookmanage.glitch.me/books/${bookId}`, { headers: { "x-api-key": token } }).then((responce) => {
+    axios.delete(`https://bookmanage.glitch.me/books/${bookId}`, { headers: { "x-api-key": token } }).then((responce) => {
       alert("Book deleted successfully")
       window.location.replace("/bookList")
 
